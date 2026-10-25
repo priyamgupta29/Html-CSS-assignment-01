@@ -1,0 +1,46 @@
+/* ==========================================
+   ASSIGNMENT 21: EXTERNAL STYLESHEET
+   ========================================== */
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: #f8fafc;
+    color: #0f172a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.assignment-card {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 2.5rem;
+    max-width: 450px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #2563eb;
+    margin-top: 0;
+    font-size: 1.75rem;
+}
+
+p {
+    color: #475569;
+    line-height: 1.6;
+}
+
+.status-badge {
+    display: inline-block;
+    background-color: #dcfce7;
+    color: #15803d;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin-top: 1rem;
+}
