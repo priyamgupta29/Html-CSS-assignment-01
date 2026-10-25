@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Task 31: Practicing flexbox containers and flex direction.">
+    <title>Task 31 – Flex Direction</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f7f7f7;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 1.5rem;
+        }
+        h1 { color: #2a5db0; }
+        
+        /* Flex Container Setup */
+        .flex-container {
+            display: flex;
+            flex-direction: row; /* Switch to column to test vertical stacking */
+            gap: 1rem;
+            background: #ffffff;
+            padding: 1.5rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        .flex-item {
+            background: #2a5db0;
+            color: white;
+            padding: 1rem;
+            flex: 1;
+            text-align: center;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Task 31: Flex Direction</h1>
+    <p>Demonstrating <code>display: flex</code> and <code>flex-direction: row</code>.</p>
+    
+    <div class="flex-container">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+</body>
+</html>

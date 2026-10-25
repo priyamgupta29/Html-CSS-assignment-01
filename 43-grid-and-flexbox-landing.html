@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Task 43: Reference landing page combining Flexbox navigation and Grid content.">
+    <title>Task 43 – Grid &amp; Flex Integration</title>
+    <style>
+        body { font-family: system-ui, sans-serif; background: #f8fafc; color: #0f172a; margin: 0; padding: 0; }
+        /* Flexbox Navbar */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: white; border-bottom: 1px solid #cbd5e1; }
+        .logo { font-weight: bold; color: #2563eb; font-size: 1.2rem; }
+        .nav-links { display: flex; gap: 1.5rem; list-style: none; margin: 0; padding: 0; }
+        .nav-links a { text-decoration: none; color: #475569; font-weight: 500; }
+        
+        /* CSS Grid Content Section */
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
+        .landing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        .feature-box { background: white; padding: 1.5rem; border: 1px solid #cbd5e1; border-radius: 8px; }
+        .feature-box h3 { color: #1e3a8a; margin-top: 0; }
+    </style>
+</head>
+<body>
+    <nav>
+        <span class="logo">BrandCore</span>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main class="container">
+        <h1>Task 43: Hybrid Layout</h1>
+        <div class="landing-grid">
+            <div class="feature-box"><h3>Flexbox Header</h3><p>Used for single-axis alignments like toolbars and navigation menus.</p></div>
+            <div class="feature-box"><h3>CSS Grid Body</h3><p>Used for two-dimensional multi-column layouts and auto-reflow structures.</p></div>
+        </div>
+    </main>
+</body>
+</html>

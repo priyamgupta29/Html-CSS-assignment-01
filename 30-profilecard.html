@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 30 – Profile Card Component</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            background: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .profile-card {
+            background: #ffffff;
+            width: 320px;
+            border: 1px solid #cbd5e1;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .profile-avatar {
+            width: 80px;
+            height: 80px;
+            background: #2563eb;
+            color: white;
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto 1rem auto;
+            font-weight: bold;
+        }
+        .profile-card h2 {
+            margin: 0 0 0.25rem 0;
+            color: #0f172a;
+        }
+        .profile-card p {
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+        .btn-profile {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .btn-profile:hover {
+            background: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+    <article class="profile-card">
+        <div class="profile-avatar">AS</div>
+        <h2>Aarav Sharma</h2>
+        <p>Frontend Developer &amp; UI Student</p>
+        <a href="#" class="btn-profile">View Profile</a>
+    </article>
+</body>
+</html>

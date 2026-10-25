@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 25 – Design Choices Note</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            background-color: #f8fafc;
+            color: #0f172a;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            line-height: 1.6;
+        }
+        .note-container {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        h1 { color: #2563eb; }
+        ul { background: #eff6ff; padding: 1.5rem 2rem; border-radius: 6px; border: 1px solid #bfdbfe; }
+        li { margin-bottom: 0.75rem; }
+    </style>
+</head>
+<body>
+    <main class="note-container">
+        <h1>Task 25: Design Choices Note</h1>
+        <p>Documenting architectural and aesthetic decisions for the CSS Fundamentals module:</p>
+        <ul>
+            <li><strong>Typography:</strong> Selected <em>Poppins</em> for headlines due to its modern geometric structure, paired with <em>Inter</em> for neutral, high-readability body copy.</li>
+            <li><strong>Color Hierarchy:</strong> Established a trustworthy deep blue primary token (`#2563eb`) paired with an off-white slate background (`#f8fafc`) to minimize visual fatigue.</li>
+            <li><strong>Code Modularity:</strong> Centralized all values into CSS design tokens (`:root`) to ensure consistent spacing, radius scaling, and rapid future palette updates.</li>
+        </ul>
+    </main>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 22 – Four Selector Types</title>
+    <style>
+        /* 1. Element Selector */
+        body { font-family: system-ui, sans-serif; margin: 2rem; background: #f8fafc; }
+
+        /* 2. ID Selector */
+        #unique-banner { background: #1e3a8a; color: white; padding: 1rem; border-radius: 6px; }
+
+        /* 3. Class Selector */
+        .content-card { background: white; border: 1px solid #cbd5e1; padding: 1.5rem; margin-top: 1rem; border-radius: 6px; }
+
+        /* 4. Attribute Selector */
+        input[type="text"] { border: 2px solid #2563eb; padding: 0.5rem; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <header id="unique-banner">
+        <h1>ID Selector Header</h1>
+    </header>
+
+    <main class="content-card">
+        <h2>Class Selector Card</h2>
+        <p>This uses a class selector. Below is an attribute selector input:</p>
+        <input type="text" placeholder="Enter text here...">
+    </main>
+</body>
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TaskFlow – Complete Flexbox landing page featuring nav, hero, feature grid, and footer.">
+  <title>TaskFlow – Flexbox Landing Page</title>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --bg-light: #f8fafc;
+      --surface: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --border-color: #e2e8f0;
+      --accent: #10b981;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, sans-serif;
+      color: var(--text-main);
+      background-color: var(--surface);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Navigation Bar */
+    nav {
+      border-bottom: 1px solid var(--border-color);
+      background: var(--surface);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-block: 1.25rem;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 1.4rem;
+      color: var(--primary);
+      letter-spacing: -0.5px;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    nav ul a {
+      color: var(--text-muted);
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    nav ul a:hover {
+      color: var(--primary);
+    }
+
+    .nav-cta {
+      background: var(--primary) !important;
+      color: #fff !important;
+      padding: 0.5rem 1.2rem;
+      border-radius: 6px;
+      font-weight: 600 !important;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: var(--bg-light);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .hero .container {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      padding-block: 5rem;
+    }
+
+    .hero__text,
+    .hero__img {
+      flex: 1;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      color: var(--text-main);
+      line-height: 1.15;
+      margin-bottom: 1.2rem;
+      letter-spacing: -1px;
+    }
+
+    .hero p {
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      font-size: 1.05rem;
+      max-width: 48ch;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      padding: 0.85rem 1.75rem;
+      border-radius: 8px;
+      font-weight: 600;
+      box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+      transition: background 0.2s;
+    }
+
+    .btn:hover {
+      background: var(--primary-dark);
+    }
+
+    .hero__img img {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+      display: block;
+    }
+
+    /* Features Section */
+    .features {
+      padding-block: 5rem;
+      text-align: center;
+    }
+
+    .features h2 {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+      color: var(--text-main);
+    }
+
+    .features-subtitle {
+      color: var(--text-muted);
+      margin-bottom: 3rem;
+      font-size: 1.05rem;
+    }
+
+    .features__list {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .feature {
+      flex: 1 1 300px;
+      background: var(--surface);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 2.25rem 1.75rem;
+      text-align: left;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    }
+
+    .feature-icon {
+      font-size: 2rem;
+      background: var(--bg-light);
+      display: inline-block;
+      padding: 0.75rem;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      border: 1px solid var(--border-color);
+    }
+
+    .feature h3 {
+      margin-bottom: 0.5rem;
+      color: var(--text-main);
+      font-size: 1.2rem;
+    }
+
+    .feature p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Highlights / Stats Section */
+    .highlights {
+      background: var(--bg-light);
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      padding-block: 3.5rem;
+    }
+
+    .highlights .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: space-around;
+      text-align: center;
+    }
+
+    .stat-item h4 {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 0.25rem;
+      font-weight: 800;
+    }
+
+    .stat-item p {
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--surface);
+    }
+
+    footer .container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding-block: 2rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* Responsive Media Query */
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+      }
+
+      .hero .container {
+        flex-direction: column;
+        text-align: center;
+        padding-block: 3rem;
+      }
+
+      .hero p {
+        margin-inline: auto;
+      }
+
+      .highlights .container {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="container">
+      <span class="logo">TaskFlow</span>
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#stats">Metrics</a></li>
+        <li><a href="#" class="nav-cta">Get Started</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero__text">
+        <h1>Organize projects. Empower teams.</h1>
+        <p>The modern workspace designed to streamline collaboration, track live progress, and ship products faster without the clutter.</p>
+        <a class="btn" href="#">Start Free Trial</a>
+      </div>
+      <div class="hero__img">
+        <img src="https://picsum.photos/id/60/700/500" alt="Workspace dashboard interface preview">
+      </div>
+    </div>
+  </header>
+
+  <!-- Features Grid Section -->
+  <section class="features" id="features">
+    <div class="container">
+      <h2>Built for high-velocity teams</h2>
+      <p class="features-subtitle">Everything you need to keep your projects on schedule and under budget.</p>
+      
+      <div class="features__list">
+        <div class="feature">
+          <div class="feature-icon">⚡</div>
+          <h3>Lightning Fast</h3>
+          <p>Optimized interface with zero lag so you can update boards instantly.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">📊</div>
+          <h3>Live Analytics</h3>
+          <p>Real-time progress charts that track milestone completion velocity.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🔒</div>
+          <h3>Enterprise Security</h3>
+          <p>Advanced role-based permissions and end-to-end data encryption.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Highlights / Metrics Section -->
+  <section class="highlights" id="stats">
+    <div class="container">
+      <div class="stat-item">
+        <h4>99.9%</h4>
+        <p>Uptime Guarantee</p>
+      </div>
+      <div class="stat-item">
+        <h4>3x</h4>
+        <p>Faster Sprint Cycles</p>
+      </div>
+      <div class="stat-item">
+        <h4>24/7</h4>
+        <p>Dedicated Support</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <span>&copy; 2026 TaskFlow Inc. All rights reserved.</span>
+      <span>Privacy Policy · Terms of Service · Security</span>
+    </div>
+  </footer>
+
+</body>
+
+</html>

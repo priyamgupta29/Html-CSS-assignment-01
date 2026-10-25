@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 26 – Box Model Anatomy</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            background: #f7f7f7;
+            color: #333;
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+        /* Box Model Demonstration */
+        .demo-box {
+            background-color: #e0e7ff; /* Margin area representation */
+            border: 4px solid #1e3a8a;   /* Border area */
+            padding: 2rem;               /* Padding area */
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+        .inner-content {
+            background-color: #ffffff;
+            border: 2px dashed #2563eb;
+            padding: 1.5rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Task 26: Box Model Breakdown</h1>
+    <p>Every HTML element is a box composed of content, padding, borders, and margins.</p>
+    
+    <div class="demo-box">
+        <div class="inner-content">
+            <strong>Content Area</strong><br>
+            Surrounded by padding, a solid border, and external margin space.
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Task 37: Automatic reflowing product grid using CSS Grid.">
+    <title>Task 37 – Auto-Reflow Product Grid</title>
+    <style>
+        body { font-family: system-ui, sans-serif; background: #f8fafc; color: #0f172a; max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
+        h1 { color: #2563eb; }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .product-card {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .product-card h3 { margin: 0 0 0.5rem 0; font-size: 1.1rem; color: #1e3a8a; }
+        .product-card p { color: #64748b; font-size: 0.9rem; margin-bottom: 1rem; }
+        .price { font-weight: bold; color: #059669; margin-bottom: 1rem; }
+        .btn { background: #2563eb; color: white; border: none; padding: 0.5rem; border-radius: 4px; text-align: center; cursor: pointer; font-weight: 600; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <h1>Task 37: Auto-Reflow Product Grid</h1>
+    <p>Using <code>repeat(auto-fill, minmax(220px, 1fr))</code> for intelligent screen adaptation.</p>
+    <div class="product-grid">
+        <div class="product-card"><div><h3>Dev Hoodie</h3><p>Comfortable cotton fleece.</p><div class="price">$45.00</div></div><a href="#" class="btn">Add to Cart</a></div>
+        <div class="product-card"><div><h3>Mechanical Keyboard</h3><p>Tactile switches &amp; RGB.</p><div class="price">$120.00</div></div><a href="#" class="btn">Add to Cart</a></div>
+        <div class="product-card"><div><h3>Ergonomic Mouse</h3><p>Wireless precision tracking.</p><div class="price">$65.00</div></div><a href="#" class="btn">Add to Cart</a></div>
+        <div class="product-card"><div><h3>Desk Mat</h3><p>Stitched edges waterproof pad.</p><div class="price">$25.00</div></div><a href="#" class="btn">Add to Cart</a></div>
+    </div>
+</body>
+</html>

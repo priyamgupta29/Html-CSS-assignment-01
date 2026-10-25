@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Task 38: Dashboard layout using grid-template-areas.">
+    <title>Task 38 – Named Grid Dashboard</title>
+    <style>
+        body { font-family: system-ui, sans-serif; background: #f8fafc; color: #0f172a; margin: 0; padding: 1rem; }
+        .dashboard-container {
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "sidebar main";
+            grid-template-columns: 240px 1fr;
+            grid-template-rows: 70px 1fr;
+            gap: 1rem;
+            height: 95vh;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header { grid-area: header; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 8px; display: flex; align-items: center; padding: 0 1.5rem; font-weight: bold; color: #2563eb; font-size: 1.25rem; }
+        aside { grid-area: sidebar; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 8px; padding: 1.5rem; }
+        main { grid-area: main; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 8px; padding: 1.5rem; }
+        aside ul { list-style: none; padding: 0; margin: 0; }
+        aside li { margin-bottom: 0.75rem; color: #475569; font-weight: 500; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>Dashboard Panel</header>
+        <aside>
+            <h3>Navigation</h3>
+            <ul>
+                <li>Overview</li>
+                <li>Analytics</li>
+                <li>Settings</li>
+            </ul>
+        </aside>
+        <main>
+            <h2>Welcome Back, Aarav</h2>
+            <p>This layout is structured completely using <code>grid-template-areas</code>.</p>
+        </main>
+    </div>
+</body>
+</html>

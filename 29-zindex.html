@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 29 – Positioning &amp; Z-Index</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            margin: 0;
+            background: #f7f7f7;
+        }
+        /* Hero Section Container using Relative Positioning */
+        .hero {
+            position: relative;
+            height: 300px;
+            background: #1e3a8a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+        /* Absolute Overlay with Lower Z-Index */
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+        /* Content with Higher Z-Index to sit above overlay */
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 0 1rem;
+        }
+        .hero-content h1 {
+            margin: 0 0 0.5rem 0;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Task 29: Position &amp; Z-Index Hero Banner</h1>
+            <p>Demonstrating layered absolute positioning elements.</p>
+        </div>
+    </header>
+</body>
+</html>

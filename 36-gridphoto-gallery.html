@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Task 36: Simple photo gallery using CSS Grid.">
+    <title>Task 36 – Photo Gallery</title>
+    <style>
+        body { font-family: system-ui, sans-serif; background: #f8fafc; color: #0f172a; max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        h1 { color: #2563eb; }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.25rem;
+            margin-top: 1.5rem;
+        }
+        .gallery-item {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .gallery-item img { width: 100%; height: 180px; object-fit: cover; display: block; }
+        .gallery-caption { padding: 1rem; font-size: 0.9rem; font-weight: 600; color: #334155; }
+    </style>
+</head>
+<body>
+    <h1>Task 36: Photo Gallery (CSS Grid)</h1>
+    <p>Using CSS Grid with <code>grid-template-columns</code> and <code>minmax()</code>.</p>
+    <div class="gallery-grid">
+        <div class="gallery-item"><img src="https://picsum.photos/id/10/400/300" alt="Landscape view"><div class="gallery-caption">Scenic View</div></div>
+        <div class="gallery-item"><img src="https://picsum.photos/id/20/400/300" alt="Workspace desk"><div class="gallery-caption">Workspace Setup</div></div>
+        <div class="gallery-item"><img src="https://picsum.photos/id/30/400/300" alt="Architecture"><div class="gallery-caption">Modern Architecture</div></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Assignment 28: Practicing border-radius and background variants.">
+  <title>Aarav Sharma – Assignment 28: Border-Radius & Backgrounds</title>
+  <style>
+    /* ===== ASSIGNMENT 28: BORDER-RADIUS & BACKGROUND STYLING ===== */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f7f7f7;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+
+    header {
+      border-bottom: 3px solid #2a5db0;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      color: #2a5db0;
+      margin-bottom: 0;
+    }
+
+    h2 {
+      color: #2a5db0;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: .25rem;
+    }
+
+    section {
+      background: #fff;
+      padding: 1.25rem;
+      margin-bottom: 1.25rem;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    /* VARIANT 1: Subtle corner rounding */
+    .card-subtle {
+      border-radius: 4px;
+      background: #ffffff;
+    }
+
+    /* VARIANT 2: Modern container rounding with custom border */
+    .card-modern {
+      border-radius: 12px;
+      border: 2px solid #2a5db0;
+      background: #f0f4ff;
+    }
+
+    /* VARIANT 3: Fully rounded pill shape with gradient background */
+    .card-pill {
+      border-radius: 50px;
+      background: linear-gradient(135deg, #2a5db0 0%, #4a90e2 100%);
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    .card-pill h2, .card-pill p {
+      color: white;
+      border-bottom: none;
+    }
+
+    footer {
+      text-align: center;
+      color: #777;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Aarav Sharma</h1>
+    <p>Module 5: CSS Fundamentals – Assignment 28</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Overview</h2>
+      <p>This assignment demonstrates various <strong>border-radius</strong> curves and custom background variants applied to modular sections.</p>
+    </section>
+
+    <!-- VARIANT 1 -->
+    <section class="card-subtle">
+      <h2>1. Subtle Radius (4px)</h2>
+      <p>Provides a clean, sharp, traditional panel look with a minimal rounded edge.</p>
+    </section>
+
+    <!-- VARIANT 2 -->
+    <section class="card-modern">
+      <h2>2. Modern Radius (12px)</h2>
+      <p>Softer contemporary container style accompanied by a highlighted accent border and light surface tint.</p>
+    </section>
+
+    <!-- VARIANT 3 -->
+    <section class="card-pill">
+      <h2>3. Pill Shape (50px) + Gradient</h2>
+      <p>Fully rounded curved container utilizing a modern linear background gradient.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p><small>&copy; 2026 Aarav Sharma</small></p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Assignment 34: Mastering flex-grow, flex-shrink, and flex-basis.">
+  <title>Aarav Sharma – Assignment 34: Flex Sizing</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, sans-serif;
+      color: #0f172a;
+      background: #f8fafc;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 900px;
+      width: 100%;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 2.5rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+      border: 1px solid #e2e8f0;
+    }
+
+    .header-section {
+      margin-bottom: 2rem;
+    }
+
+    .header-section h1 {
+      font-size: 1.8rem;
+      color: #1e3a8a;
+      margin-bottom: 0.5rem;
+    }
+
+    .header-section p {
+      color: #64748b;
+      font-size: 0.95rem;
+    }
+
+    /* ==========================================
+       ASSIGNMENT 34 CORE: FLEX SIZING ROW
+       ========================================== */
+    .flex-sizing-row {
+      display: flex;
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    /* Item 1: Fixed / Non-growing sidebar card */
+    .card-fixed {
+      flex: 0 0 220px; /* flex-grow: 0, flex-shrink: 0, flex-basis: 220px */
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      padding: 1.5rem;
+      border-radius: 10px;
+    }
+
+    /* Item 2: Expanding primary flexible content card */
+    .card-expand {
+      flex: 1 1 auto; /* flex-grow: 1, flex-shrink: 1, flex-basis: auto */
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      padding: 1.5rem;
+      border-radius: 10px;
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      color: #1e3a8a;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: #475569;
+      line-height: 1.5;
+    }
+
+    .code-badge {
+      display: inline-block;
+      background: #ffffff;
+      color: #2563eb;
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.8rem;
+      border: 1px solid #cbd5e1;
+      margin-top: 0.75rem;
+    }
+
+    /* Explanation Footer Note */
+    .info-box {
+      background: #f8fafc;
+      border-left: 4px solid #2563eb;
+      padding: 1rem;
+      font-size: 0.875rem;
+      color: #334155;
+      border-radius: 0 8px 8px 0;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .flex-sizing-row {
+        flex-direction: column;
+      }
+      .card-fixed {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="container">
+    <div class="header-section">
+      <h1>Task 34: Flex Sizing Properties</h1>
+      <p>Controlling layout allocation using <code>flex-grow</code>, <code>flex-shrink</code>, and <code>flex-basis</code>.</p>
+    </div>
+
+    <!-- Flex container implementing custom sizing rules -->
+    <div class="flex-sizing-row">
+      <!-- Fixed Sidebar Card -->
+      <div class="card card-fixed">
+        <h3>Fixed Panel</h3>
+        <p>This item is restricted from growing or shrinking.</p>
+        <div class="code-badge">flex: 0 0 220px</div>
+      </div>
+
+      <!-- Expanding Fluid Card -->
+      <div class="card card-expand">
+        <h3>Flexible Content Area</h3>
+        <p>This panel dynamically scales to fill up all remaining available horizontal width inside the parent container.</p>
+        <div class="code-badge">flex: 1 1 auto</div>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <strong>Rule Breakdown:</strong> The shorthand property <code>flex</code> combines growth potential, shrinking capacity, and the starting baseline size to manage modern fluid interfaces seamlessly.
+    </div>
+  </main>
+
+</body>
+
+</html>

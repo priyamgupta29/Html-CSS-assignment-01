@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Task 42: Audited layout with overflow control and elastic sizing.">
+    <title>Task 42 – Responsive Audit Fix</title>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        body { font-family: system-ui, sans-serif; background: #f8fafc; color: #0f172a; max-width: 700px; margin: 0 auto; padding: 1.5rem; }
+        img { max-width: 100%; height: auto; display: block; border-radius: 8px; }
+        .card { background: white; border: 1px solid #cbd5e1; padding: 1.5rem; border-radius: 8px; }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <h1>Task 42: Audit &amp; Fix</h1>
+        <p>Ensured fluid media scaling using <code>max-width: 100%</code> and universal <code>box-sizing: border-box</code>.</p>
+        <img src="https://picsum.photos/id/1015/800/400" alt="Audited responsive image sample">
+    </main>
+</body>
+</html>

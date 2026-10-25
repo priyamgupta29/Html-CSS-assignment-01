@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Task 45: Capstone fully responsive landing page project.">
+    <title>Task 45 – Final Responsive Capstone</title>
+    <style>
+        :root { --primary: #2563eb; --bg: #f8fafc; --text: #0f172a; }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: system-ui, sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; }
+        
+        /* Navbar */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 2rem; background: white; border-bottom: 1px solid #cbd5e1; }
+        .logo { font-weight: 800; color: var(--primary); font-size: 1.3rem; }
+        .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+        .nav-links a { text-decoration: none; color: #475569; font-weight: 500; }
+        
+        /* Hero Section */
+        .hero { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding: 4rem 2rem; max-width: 1100px; margin: 0 auto; }
+        .hero-text { flex: 1; }
+        .hero-text h1 { font-size: 2.75rem; color: #1e3a8a; margin-bottom: 1rem; line-height: 1.2; }
+        .hero-text p { color: #64748b; margin-bottom: 1.5rem; }
+        .btn { display: inline-block; background: var(--primary); color: white; padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 600; text-decoration: none; }
+        .hero-img { flex: 1; }
+        .hero-img img { width: 100%; border-radius: 12px; display: block; }
+        
+        /* Footer */
+        footer { text-align: center; padding: 2rem; background: white; border-top: 1px solid #cbd5e1; color: #64748b; margin-top: 3rem; }
+        
+        /* Responsive Breakpoint */
+        @media (max-width: 768px) {
+            .hero { flex-direction: column; text-align: center; padding: 2rem 1rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <span class="logo">DevStudio</span>
+        <ul class="nav-links">
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Solutions</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-text">
+            <h1>Fully Responsive Capstone Project</h1>
+            <p>Demonstrating complete command over modern HTML5 semantic layout, CSS Grid, Flexbox, design tokens, and media query breakpoints.</p>
+            <a href="#" class="btn">Explore Curriculum</a>
+        </div>
+        <div class="hero-img">
+            <img src="https://picsum.photos/id/3/600/400" alt="Responsive workspace setup">
+        </div>
+    </header>
+
+    <footer>
+        <p>&copy; 2026 Aarav Sharma · 45-Task Web Development Curriculum Complete ✔</p>
+    </footer>
+</body>
+</html>
