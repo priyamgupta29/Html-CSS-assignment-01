@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Portfolio and Blog – Module 3 Assignment">
+    <title>My Portfolio & Blog</title>
+</head>
+<body>
+    <!--
+      MODULE 3 REQUIREMENTS IMPLEMENTED IN THIS CODE:
+      1. Task 11: Created a portfolio page with working internal navigation (#about, #projects, #contact).
+      2. Task 12: Ensured every image has a meaningful alt attribute.
+      3. Task 13: Created structured info using lists (unordered and ordered lists).
+      4. Task 14: Used correct semantic tags (<header>, <nav>, <main>, <section>, <article>, <footer>).
+      5. Task 15: Completed personal blog/portfolio page structure[cite: 1].
+    -->
+
+    <!-- Header & Internal Navigation (Tasks 11 & 14) -->
+    <header>
+        <h1>Alex Doe's Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#college">College & Course</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- About Section with Image and Alt Attribute (Tasks 12 & 14) -->
+        <section id="about">
+            <h2>About Me</h2>
+            <img src="profile.jpg" alt="Portrait photo of Alex smiling in front of a laptop" width="300">
+            <p>Welcome to my personal portfolio page! I am learning web development fundamentals.</p>
+        </section>
+
+        <!-- College / Course Info Section using Lists (Task 13) -->
+        <section id="college">
+            <h2>My College & Course</h2>
+            <p>Here is an overview of my academic track:</p>
+            <ul>
+                <li><strong>Institution:</strong> Tech University</li>
+                <li><strong>Major:</strong> Computer Science</li>
+                <li><strong>Current Semester Courses:</strong>
+                    <ol>
+                        <li>Web Fundamentals (HTML & CSS)</li>
+                        <li>Introduction to Programming</li>
+                        <li>Database Management Systems</li>
+                    </ol>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>My Projects</h2>
+            <article>
+                <h3>Project 1: Basic HTML Resume</h3>
+                <p>A semantic resume page built using structural HTML elements.</p>
+            </article>
+            <article>
+                <h3>Project 2: Interactive Blog</h3>
+                <p>A multi-section personal blog featuring lists, images, and links.</p>
+            </article>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Reach out via email at: <a href="mailto:alex@example.com">alex@example.com</a></p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Alex Doe. All rights reserved.</p>
+    </footer>
+</body>
+</html>
